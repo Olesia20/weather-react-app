@@ -1,0 +1,142 @@
+.Weather {
+  font-family: "Outfit", sans-serif;
+  text-align: center;
+  margin: 0 auto;
+ margin-top: 30px;
+  max-width: 800px;
+  width: 100%;
+  background-color: #f0ecec;
+  border-radius: 40px;
+  box-shadow:
+    5px 5px 10px #cecdcd,
+    -5px -5px 10px #ffff;
+}
+.Weather h3 {
+    margin-top: 20px;
+text-align: left;
+  font-size: 25px;
+  font-weight: 100;
+}
+.Weather h2 {
+    margin-top: 20px ;
+    font-weight: 100;
+    margin-left: 40px; 
+}
+.Weather img{
+    margin-top: 15px;
+    margin-left: 40px; 
+}
+.Weather ul{
+    margin-top: 25px;
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+}
+.Weather li {
+    font-weight: 100;
+}
+.container-1,
+.container-2 {
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+margin-left: 20px;
+margin-right: 20px;
+ height: 600px;
+  background-color: #f1f1f1;
+  box-shadow:
+    inset 5px 5px 10px #c5c5c5,
+    inset -5px -5px 10px #ffff;
+  border-radius: 30px;
+}
+.container-3{
+    margin-top: 40px;
+ box-shadow:
+    inset 5px 5px 10px #c5c5c5,
+    inset -5px -5px 10px #ffff;
+  border-radius: 30px;
+}
+.container-3 ul{
+   
+    text-align: center;
+    padding: 30px;
+
+}
+.city-cerach, .search{
+    margin-top: 30px;
+     width: 100%;
+    background-color: #faf7f7;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow:
+    inset 5px 5px 10px #d1d0d0,
+    inset -5px -5px 10px #ffff;
+    color: rgb(169, 169, 169);
+}
+.clock-number {
+  margin: 0;
+  display: flex;
+ 
+  justify-content: center;
+}
+.clock {
+   margin: 0 auto;
+  margin-top: 30px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #faf7f7;
+  position: relative;
+  
+    box-shadow:
+    inset 5px 5px 10px #d1d0d0,
+    inset -5px -5px 10px #ffff;
+}
+.namber {
+  position: absolute;
+  font-size: 25px;
+}
+.namber12 {
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.namber3 {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.namber6 {
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.namber9 {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  background: #555;
+  border-radius: 20px;
+}
+.hour-hand {
+  width: 1px;
+  height: 40px;
+}
+.minute-hand {
+  width: 1px;
+  height: 60px;
+}
+.second-hand {
+  width: 1px;
+  height: 60px;
+  background: #eda893;
+}
+

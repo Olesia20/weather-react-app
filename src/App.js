@@ -4,11 +4,19 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <div className="container">
-        <header className="App-header">
-          <h1>Weather react app </h1>
-          <Weather city="Tokyo" />
-        </header>
+      <div className="container">      
+        
+        <Weather/>
+          <p>
+            This project was coded by Olesia Kononova and Open-sourced{" "}
+            <a
+              href="https://github.com/Olesia20/weather-react-app"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub{" "}
+            </a>
+          </p>
       </div>
     </div>
   );

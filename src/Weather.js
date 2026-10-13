@@ -97,29 +97,47 @@ export default function Weather() {
                   Monday 15°C/<strong>28°C</strong>
                   <br />
                   cloudy{" "}
-                  <img src="https://www.gstatic.com/weather/conditions/v1/svg/cloudy_light.svg" />
-                </p><p>
-                  Monday 15°C/<strong>28°C</strong>
-                  <br />
-                  cloudy{" "}
-                  <img src="https://www.gstatic.com/weather/conditions/v1/svg/cloudy_light.svg" />
-                </p><p>
-                  Monday 15°C/<strong>28°C</strong>
-                  <br />
-                  cloudy{" "}
-                  <img src="https://www.gstatic.com/weather/conditions/v1/svg/cloudy_light.svg" />
-                </p><p>
-                  Monday 15°C/<strong>28°C</strong>
-                  <br />
-                  cloudy{" "}
-                  <img src="https://www.gstatic.com/weather/conditions/v1/svg/cloudy_light.svg" />
-                </p><p>
-                  Monday 15°C/<strong>28°C</strong>
-                  <br />
-                  cloudy{" "}
-                  <img src="https://www.gstatic.com/weather/conditions/v1/svg/cloudy_light.svg" />
+                  <img
+                    src="https://www.gstatic.com/weather/conditions/v1/svg/cloudy_light.svg"
+                    alt="mostly cloudy"
+                  />
                 </p>
-               
+                <p>
+                  Monday 15°C/<strong>28°C</strong>
+                  <br />
+                  cloudy{" "}
+                  <img
+                    src="https://www.gstatic.com/weather/conditions/v1/svg/cloudy_light.svg"
+                    alt="mostly cloudy"
+                  />
+                </p>
+                <p>
+                  Monday 15°C/<strong>28°C</strong>
+                  <br />
+                  cloudy{" "}
+                  <img
+                    src="https://www.gstatic.com/weather/conditions/v1/svg/cloudy_light.svg"
+                    alt="mostly cloudy"
+                  />
+                </p>
+                <p>
+                  Monday 15°C/<strong>28°C</strong>
+                  <br />
+                  cloudy{" "}
+                  <img
+                    src="https://www.gstatic.com/weather/conditions/v1/svg/cloudy_light.svg"
+                    alt="mostly cloudy"
+                  />
+                </p>
+                <p>
+                  Monday 15°C/<strong>28°C</strong>
+                  <br />
+                  cloudy{" "}
+                  <img
+                    src="https://www.gstatic.com/weather/conditions/v1/svg/cloudy_light.svg"
+                    alt="mostly cloudy"
+                  />
+                </p>
               </div>
             </div>
           </div>

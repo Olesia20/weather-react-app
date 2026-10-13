@@ -24,14 +24,14 @@ export default function Weather() {
           <div className="col-12 col-md-6">
             <div className="container-1">
               <div className="row">
-                <div className="col-6">
+                <div className="col-7">
                   <h3>Kyiv</h3>
                   <ul>
-                    <li>Wednesday: 07:00</li>
+                    <li>Wednesday 07:00</li>
                     <li>Mostly cloudy</li>
                   </ul>
                 </div>
-                <div className="col-6">
+                <div className="col-5">
                   <h2>25°C</h2>
                   <img
                     src="https://www.gstatic.com/weather/conditions/v1/svg/cloudy_light.svg"
@@ -90,8 +90,37 @@ export default function Weather() {
           </div>
 
           <div className="col-12 col-md-6">
-            <div className="container-2">
-              <h3>Forecast</h3>
+            <div className="forecast">
+              <h3>Forecast 5-day</h3>
+              <div className="container-4">
+                <p>
+                  Monday 15°C/<strong>28°C</strong>
+                  <br />
+                  cloudy{" "}
+                  <img src="https://www.gstatic.com/weather/conditions/v1/svg/cloudy_light.svg" />
+                </p><p>
+                  Monday 15°C/<strong>28°C</strong>
+                  <br />
+                  cloudy{" "}
+                  <img src="https://www.gstatic.com/weather/conditions/v1/svg/cloudy_light.svg" />
+                </p><p>
+                  Monday 15°C/<strong>28°C</strong>
+                  <br />
+                  cloudy{" "}
+                  <img src="https://www.gstatic.com/weather/conditions/v1/svg/cloudy_light.svg" />
+                </p><p>
+                  Monday 15°C/<strong>28°C</strong>
+                  <br />
+                  cloudy{" "}
+                  <img src="https://www.gstatic.com/weather/conditions/v1/svg/cloudy_light.svg" />
+                </p><p>
+                  Monday 15°C/<strong>28°C</strong>
+                  <br />
+                  cloudy{" "}
+                  <img src="https://www.gstatic.com/weather/conditions/v1/svg/cloudy_light.svg" />
+                </p>
+               
+              </div>
             </div>
           </div>
         </div>

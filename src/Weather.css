@@ -51,14 +51,13 @@ margin-right: 20px;
   border-radius: 30px;
 }
 .container-3{
-    margin-top: 40px;
+    margin-top: 30px;
  box-shadow:
     inset 5px 5px 10px #c5c5c5,
     inset -5px -5px 10px #ffff;
   border-radius: 30px;
 }
 .container-3 ul{
-   
     text-align: center;
     padding: 30px;
 
@@ -78,12 +77,11 @@ margin-right: 20px;
 .clock-number {
   margin: 0;
   display: flex;
- 
   justify-content: center;
 }
 .clock {
    margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 10px;
   width: 150px;
   height: 150px;
   border-radius: 50%;

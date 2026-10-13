@@ -1,32 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Weather.css";
-const hourHand = document.querySelector(".hour-hand");
-const minuteHand = document.querySelector(".minute-hand");
-const secondHand = document.querySelector(".second-hand");
-
-function setClock() {
-  const now = new Date();
-
-  const seconds = now.getSeconds();
-  const minutes = now.getMinutes();
-  const hours = now.getHours();
-
-  const secondDegrees = seconds * 6;
-  const minuteDegrees = minutes * 6;
-  const hourDegrees = hours * 30 + minutes * 0.5;
-
-  secondHand.style.transform = `rotate(${secondDegrees}deg)`;
-
-  minuteHand.style.transform = `rotate(${minuteDegrees}deg)`;
-
-  hourHand.style.transform = `rotate(${hourDegrees}deg)`;
-}
-
-setClock();
-setInterval(setClock, 1000);
-
 
 export default function Weather() {
+  const [time, setTime] = useState(new Date());
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+    return () => clearInterval(intervalId);
+  }, []);
+  const seconds = time.getSeconds();
+  const minutes = time.getMinutes();
+  const hours = time.getHours();
+  const secondDegrees = seconds * 6;
+  const minuteDegrees = minutes * 6;
+  const hourDegrees = (hours % 12) * 30 + minutes * 0.5;
+
   return (
     <div className="container-fluid Weather">
       <div className="container text-center ">
@@ -70,15 +60,31 @@ export default function Weather() {
                   <li>Wind: 6 Km/H</li>
                 </ul>
               </div>
-              <div class="clock">
-                <div class="namber namber12">12</div>
-                <div class="namber namber3">3</div>
-                <div class="namber namber6">6</div>
-                <div class="namber namber9">9</div>
-                <div class="hand hour-hand"></div>
-                <div class="hand minute-hand"></div>
-                <div class="hand second-hand"></div>
-                <div class="center-dot"></div>
+
+              <div className="clock">
+                <div className="namber namber12">12</div>
+                <div className="namber namber3">3</div>
+                <div className="namber namber6">6</div>
+                <div className="namber namber9">9</div>
+                <div
+                  className="hand hour-hand"
+                  style={{
+                    transform: `rotate(${hourDegrees}deg)`,
+                  }}
+                />
+                <div
+                  className="hand minute-hand"
+                  style={{
+                    transform: `rotate(${minuteDegrees}deg)`,
+                  }}
+                />
+                <div
+                  className="hand second-hand"
+                  style={{
+                    transform: `rotate(${secondDegrees}deg)`,
+                  }}
+                />
+                <div className="center-dot"></div>
               </div>
             </div>
           </div>

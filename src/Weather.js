@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Weather.css";
 import WeatherForecast from "./WeatherForecast";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
-  // const [ready, setReady] = useState(false);
+
   const [weatherDate, setWeatherDate] = useState({ ready: false });
   const [time, setTime] = useState(new Date());
   useEffect(() => {
@@ -20,9 +21,10 @@ export default function Weather(props) {
   const minuteDegrees = minutes * 6;
   const hourDegrees = (hours % 12) * 30 + minutes * 0.5;
   function handleResponse(response) {
+    // console.log(new Date(response.data.time * 1000));
     setWeatherDate({
       ready: true,
-      date: "Wednesday 07:00",
+      date: new Date(response.data.time * 1000),
       country: response.data.country,
       temperature: response.data.temperature.current,
       wind: response.data.wind.speed,
@@ -45,7 +47,7 @@ export default function Weather(props) {
                     <h3>{props.defaultCity}</h3>
                     <h6> {weatherDate.country}</h6>
                     <ul>
-                      <li>{weatherDate.date}</li>
+                      <li><FormattedDate date={weatherDate.date } /></li>
                       <li className="text-capitalize">
                         {weatherDate.description}
                       </li>

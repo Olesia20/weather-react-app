@@ -27,13 +27,16 @@
   margin-left: 20px;
 }
 .Weather ul {
-  margin-top: 25px;
   list-style: none;
   padding-left: 0;
   text-align: left;
 }
 .Weather li {
   font-weight: 100;
+}
+.container-1 h6{
+  font-weight: 100;
+  text-align: left;
 }
 .container-1,
 .forecast {
@@ -54,7 +57,7 @@
   text-align: center;
 }
 .container-3 {
-  margin-top: 30px;
+  margin-top: 20px;
   box-shadow:
     inset 5px 5px 10px #c5c5c5,
     inset -5px -5px 10px #ffff;
@@ -62,7 +65,7 @@
 }
 .container-3 ul {
   text-align: center;
-  padding: 30px;
+  padding: 25px;
 }
 .container-4 {
     padding-top: 10px;
@@ -73,12 +76,9 @@
  box-shadow:
     inset 5px 5px 10px #c5c5c5,
     inset -5px -5px 10px #ffff;
-  
 }
 .container-4 p{ 
     border-radius: 20px;
-   
-    
     padding: 10px;
     line-height: 1.5;
 }
@@ -88,7 +88,7 @@
 }
 .city-cerach,
 .search {
-  margin-top: 30px;
+  margin-top: 10px;
   width: 100%;
   background-color: #faf7f7;
   border: none;

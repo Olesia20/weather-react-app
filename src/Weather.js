@@ -21,18 +21,7 @@ export default function Weather(props) {
       icon: response.data.condition.icon_url,
     });
   }
-  function search() {
-    const apiKey = "7561c89f6et45b832o8e3c5fcade60b0";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-  }
-  function handelSubmit(event) {
-    event.preventDefault();
-    search();
-  }
-  function changeCity(event) {
-    setCity(event.target.value);
-  }
+
   if (weatherDate.ready) {
     return (
       <div className="container-fluid Weather">
@@ -58,14 +47,13 @@ export default function Weather(props) {
                     <img src={weatherDate.icon} alt={weatherDate.description} />
                   </div>
                 </div>
-                <form onSubmit={handelSubmit}>
+                <form>
                   <div className="row">
                     <div className="col-8">
                       <input
                         type="search"
                         placeholder="Enter a city..."
                         className="city-cerach"
-                        onChange={changeCity}
                       />
                     </div>
                     <div className="col-4">
@@ -92,7 +80,9 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    search();
+    const apiKey = "7561c89f6et45b832o8e3c5fcade60b0";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
     return "Loading...";
   }
 }

@@ -6,8 +6,8 @@ import WeatherForecast from "./WeatherForecast";
 import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
-
   const [weatherDate, setWeatherDate] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
     setWeatherDate({
       ready: true,
@@ -20,6 +20,18 @@ export default function Weather(props) {
       description: response.data.condition.description,
       icon: response.data.condition.icon_url,
     });
+  }
+  function search() {
+    const apiKey = "7561c89f6et45b832o8e3c5fcade60b0";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+  function handelSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+  function changeCity(event) {
+    setCity(event.target.value);
   }
   if (weatherDate.ready) {
     return (
@@ -46,13 +58,14 @@ export default function Weather(props) {
                     <img src={weatherDate.icon} alt={weatherDate.description} />
                   </div>
                 </div>
-                <form>
+                <form onSubmit={handelSubmit}>
                   <div className="row">
                     <div className="col-8">
                       <input
                         type="search"
                         placeholder="Enter a city..."
                         className="city-cerach"
+                        onChange={changeCity}
                       />
                     </div>
                     <div className="col-4">
@@ -79,9 +92,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    const apiKey = "7561c89f6et45b832o8e3c5fcade60b0";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
+    search();
     return "Loading...";
   }
 }

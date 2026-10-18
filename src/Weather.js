@@ -7,7 +7,7 @@ import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [weatherDate, setWeatherDate] = useState({ ready: false });
-  const [city, setCity] = useState(props.defaultCity);
+
   function handleResponse(response) {
     setWeatherDate({
       ready: true,

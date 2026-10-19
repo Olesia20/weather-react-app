@@ -160,6 +160,10 @@
   height: 60px;
   background: #eda893;
 }
+.WeatherTemperature a {
+  text-decoration: none;
+  color: #6f14b5;
+}
 @media (max-width: 1000px) {
   .container-4 img {
     margin-top: -5px;

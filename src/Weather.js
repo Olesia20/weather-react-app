@@ -5,6 +5,7 @@ import Clock from "./Clock";
 import WeatherForecast from "./WeatherForecast";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function Weather(props) {
   const [weatherDate, setWeatherDate] = useState({ ready: false });
@@ -56,7 +57,9 @@ export default function Weather(props) {
                     </ul>
                   </div>
                   <div className="col-5">
-                    <h2>{Math.round(weatherDate.temperature)}°C</h2>
+                    <h2>
+                      <WeatherTemperature celsius={weatherDate.temperature} />
+                    </h2>
                     <div>
                       <WeatherIcon code={weatherDate.icon} size={40} />
                     </div>

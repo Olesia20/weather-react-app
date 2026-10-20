@@ -31,7 +31,9 @@ export default function ForecastDay(props) {
             {" "}
             {Math.round(props.data.temperature.maximum)}°
           </strong>
-          <div className="forecast-description">Scattered clouds</div>
+          <div className="forecast-description">
+            {props.data.condition.description}
+          </div>
         </div>{" "}
       </div>{" "}
     </div>

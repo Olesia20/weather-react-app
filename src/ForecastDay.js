@@ -11,7 +11,7 @@ export default function ForecastDay(props) {
       "Wednesday",
       "Thursday",
       "Friday",
-      "Sturday",
+      "Saturday",
     ];
     return days[day];
   }
@@ -31,7 +31,7 @@ export default function ForecastDay(props) {
             {" "}
             {Math.round(props.data.temperature.maximum)}°
           </strong>
-          <div className="forecast-description">
+          <div className="text-capitalize" id="deskription">
             {props.data.condition.description}
           </div>
         </div>{" "}

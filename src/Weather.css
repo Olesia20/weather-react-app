@@ -80,14 +80,13 @@
 .row {
   margin-bottom: -20px;
   padding: 10px;
-  line-height: 1;
 }
 .forecast img {
   margin-left: 40px;
   width: 40px;
 }
-.forecast-description {
-  margin-top: 8px;
+#deskription {
+  margin-top: 5px;
   margin-left: 50px;
 }
 .forecastDescription {
@@ -175,12 +174,24 @@
 }
 @media (max-width: 1000px) {
   .container-4 img {
-    margin-top: -5px;
+   margin-left: 20px ;
   }
   .container-4 {
-    margin-top: 50px;
+    margin-top: 20px;
+    padding: 35px;
   }
   .Weather h2 {
     margin-left: 20px;
-  }
+    
+  }.container-1,
+.forecast{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.row{
+
+}
+#deskription{
+  margin-top: -2px;
+}
 }

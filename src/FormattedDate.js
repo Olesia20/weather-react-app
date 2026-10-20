@@ -8,7 +8,7 @@ export default function FormattedDate(props) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Sturday",
+    "Saturday",
   ];
   let monthes = [
     "Jan",

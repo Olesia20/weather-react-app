@@ -178,10 +178,6 @@
   color: #6f14b5;
 }
 @media (max-width: 1000px) {
-  .WeatherTemperature{
-   margin-right: 50px;
-
-  }
   .container-4 img {
     margin-left: 10px;
     padding-bottom: 20px;
